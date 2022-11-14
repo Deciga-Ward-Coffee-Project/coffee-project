@@ -3,12 +3,11 @@
 // renderCoffee function is concatenating "coffee.name" & "coffee.roast"
 
 function renderCoffee(coffee) {
-   let html = '<div class="coffee">';
+   let html = '<div class = \'col-6 coffee\'>';
     // html += '<p>' + coffee.id + '</p>';
     html += '<p>' + coffee.name + '</p>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
-
     return html;
 }
 
@@ -76,6 +75,7 @@ let userInput2 = document.getElementById('add-coffee') // dropdown roast
 console.log(userInput2);
 
 // userInput1.push(coffees)
+
 
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
