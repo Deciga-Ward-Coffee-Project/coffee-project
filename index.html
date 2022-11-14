@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Dev By Coffee</title>
-  <!-- BOOTSTRAP CSS LINK -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- BOOTSTRAP CSS LINK -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
@@ -13,7 +13,6 @@
     <div class="container">
         <a href="#" class="navbar-brand"><span class="text-warning">Death by Coffee</span>
         </a>
-
         <!--- Button That Turns Into Hamburger Icon When Collapsed -->
         <button class="navbar-toggler"
                 type="button"
@@ -22,26 +21,22 @@
         >
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <!-- List Created Nav Bar Links -->
         <div class="collapse navbar-collapse" id="navmenu">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a href="#About us" class="nav-link">About Us</a>
+                    <a href="#About us" class="nav-link"> About  Contact  Homepage</a>
                 </li>
-
-                <li>
-                    <a href="#Contact Us" class="nav-link">Contact Us</a>
-                </li>
-
-                <li>
-                    <a href="#Home Page" class="nav-link">Homepage</a>
-                </li>
+                <!--                <li>-->
+                <!--                    <a href="#Contact Us" class="nav-link"> Contact Us</a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a href="#Home Page" class="nav-link">Homepage</a>-->
+                <!--                </li>-->
             </ul>
         </div>
     </div>
 </nav>
-
 <!--- ShowCase -->
 <section class="bg-dark text-light pt-5 text-center text-sm-start">
     <div class="container">
@@ -51,70 +46,126 @@
                 <p>
                     Here at Death by Coffee...
                 </p>
-                    <button class="btn-sm"> Sign Up Today</button>
+                <button class="btn-sm"> Sign Up Today</button>
             </div>
             <img src="images/bean.svg" alt=" ">
         </div>
     </div>
 </section>
-
 <!-- HTML WORK -->
-<div class="container col-lg-12">
-<div class="roast-container">
-    <label>Roast</label>
-    <br>
-    <label for="roast-selection"></label>
-    <select id="roast-selection">
-        <option>all</option>
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-</div>
-
-<br>
-
-    <div class="coffee-container">
-<label>Coffee Name</label>
-<br>
-<input id="CoffeeSearchBar" type="text" name="Coffee Name"/>
-<br>
-<button id="submit" type="button">search</button>
-</form>
+<!--<div class="container col-lg-12">-->
+<!--<div class="roast-container">-->
+<!--    <label>Roast</label>-->
+<!--    <br>-->
+<!--    <label for="roast-selection"></label>-->
+<!--    <select id="roast-selection">-->
+<!--        <option>all</option>-->
+<!--        <option>light</option>-->
+<!--        <option>medium</option>-->
+<!--        <option>dark</option>-->
+<!--    </select>-->
+<!--</div>-->
+<!--<br>-->
+<!--    <div class="coffee-container">-->
+<!--<label>Coffee Name</label>-->
+<!--<br>-->
+<!--<input id="CoffeeSearchBar" type="text" name="Coffee Name"/>-->
+<!--<br>-->
+<!--<button id="submit" type="button">search</button>-->
+<!--</form>-->
+<!--    </div>-->
+<!--    <br>-->
+<!--    <div class="add-a-coffee">-->
+<!--<form>-->
+<!--    <label>Roast</label>-->
+<!--    <br>-->
+<!--    <label for="add-coffee"></label>-->
+<!--    <select id="add-coffee">-->
+<!--        <option>all</option>-->
+<!--        <option>light</option>-->
+<!--        <option>medium</option>-->
+<!--        <option>dark</option>-->
+<!--    </select>-->
+<!--    <br>-->
+<!--    <label>Add a Coffee</label>-->
+<!--    <br>-->
+<!--    <input id="addCoffee" type="text" name="Name">-->
+<!--    <br>-->
+<!--    <input id="submit1" type="button">-->
+<!--</form>-->
+<!--    </div>-->
+<!--</div>-->
+<div class="container">
+    <div class="row">
+        <div class="col-6 col-sm-6">
+            <div id="container">
+                <table>
+                    <tbody id="coffees"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-6 col-sm-6">
+            <div class="form row">
+                <div class="form1 col-12">
+                    <form>
+                        <label for="roast-selection" class="label1">Roast</label>
+                        <select class="form-select" id="roast-selection">
+                            <option value="all">all</option>
+                            <option value="light">light</option>
+                            <option value="medium">medium</option>
+                            <option value="dark">dark</option>
+                        </select>
+                        <label for="CoffeeSearchBar">Coffee Name</label>
+                        <input id="CoffeeSearchBar" type="text" class="form-control" style="color: black" placeholder="Search by  coffee name">
+                        <input class="btn btn-outline-success mt-3 mb-3" id="submit" type="submit" style=" width: 100%" />
+                    </form>
+                </div>
+                <!--        <div class="midsection">-->
+                <!--            <span class="midText">Add a Coffee</span>-->
+                <!--        </div>-->
+                <form>
+                    <label>Roast</label>
+                    <br>
+                    <label for="add-coffee"></label>
+                    <select id="add-coffee">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <br>
+                    <label>Add a Coffee</label>
+                    <br>
+                    <input id="addCoffee" type="text" name="Name" style=" width: 100%">
+                    <br>
+                    <input class="btn btn-outline-success mt-3 mb-3" id="submit1" type="button" style=" width: 100%">
+                </form>
+            </div>
+        </div>
+        <!--displaying type of coffee from search bar below-->
+        <!--<table>-->
+        <!--    <tbody id="coffees"></tbody>-->
+        <!--</table>-->
+        <script src="main.js"></script>
+        <!-- BootStrap JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     </div>
-
-    <br>
-
-    <div class="add-a-coffee">
-<form>
-    <label>Roast</label>
-    <br>
-    <label for="add-coffee"></label>
-    <select id="add-coffee">
-        <option>all</option>
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-    <br>
-    <label>Add a Coffee</label>
-    <br>
-    <input id="addCoffee" type="text" name="Name">
-    <br>
-    <input id="submit1" type="button">
-</form>
-    </div>
-</div>
-<!--displaying type of coffee from search bar below-->
-<table>
-    <tbody id="coffees"></tbody>
-</table>
-
-<script src="main.js"></script>
-
-
-
-<!-- BootStrap JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
+white_check_mark
++1
+raised_hands
+
+
+
+
+
+
+
+
+
+
+
+
+
+
