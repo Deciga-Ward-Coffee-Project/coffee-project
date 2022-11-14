@@ -1,6 +1,7 @@
-"use strict"
+(function () {
+    "use strict";
 
-// concat
+// Concatenation
 function renderCoffee(coffee) {
    let html = '<div class="coffee">';
     // html += '<p>' + coffee.id + '</p>';
@@ -12,7 +13,8 @@ function renderCoffee(coffee) {
 }
 
 
-// displaying all coffee
+// Displaying All Coffee
+
 function renderCoffees(coffees) {
    let html = '';
     for(let i = coffees.length - 1; i >= 0; i--) {
@@ -24,7 +26,7 @@ function renderCoffees(coffees) {
 //
 // });
 
-// updating new coffee into array
+// Updating new coffee into array
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
@@ -37,7 +39,7 @@ function updateCoffees(e) {
         tbody.innerHTML = renderCoffees(filteredCoffees);
     })
 }
-// array
+// Array
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -45,7 +47,7 @@ let coffees = [
     {id: 3, name: 'Cinnamon', roast: 'light'},
     {id: 4, name: 'City', roast: 'medium'},
     {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},t
+    {id: 6, name: 'Breakfast', roast: 'medium'},
     {id: 7, name: 'High', roast: 'dark'},
     {id: 8, name: 'Continental', roast: 'dark'},
     {id: 9, name: 'New Orleans', roast: 'dark'},
@@ -57,7 +59,7 @@ let coffees = [
 ];
 
 
-// Code to search for specified coffee. Pulling in from search bar.//
+// Code to search for specified coffee. Pulling in from search bar. //
 let userInput = document.getElementById('CoffeeSearchBar')
 userInput.addEventListener("keyup", function () {
 
@@ -71,7 +73,7 @@ userInput.addEventListener("keyup", function () {
 tbody.innerHTML = renderCoffees(filteredCoffees);
 })
 
-// Getting users input from...
+// Getting Users Input From...
 let userInput1 = document.getElementById('addCoffee') // text entry name
 let userInput2 = document.getElementById('add-coffee') // dropdown roast
 console.log(userInput2);
@@ -103,3 +105,8 @@ function addCoffee(){
     // userInput1.addEventListener('change' , addCoffee);
 
 }
+
+    var iffeVar = "I'm local to the IIFE.";
+})();
+
+alert(iffeVar); // undefined
