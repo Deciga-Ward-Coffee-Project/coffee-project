@@ -2,15 +2,15 @@
     "use strict";
 
 // Concatenation
-function renderCoffee(coffee) {
-   let html = '<div class="coffee">';
-    // html += '<p>' + coffee.id + '</p>';
-    html += '<p>' + coffee.name + '</p>';
-    html += '<p>' + coffee.roast + '</p>';
-    html += '</div>';
+    function renderCoffee(coffee) {
+        return `
+    <div class="coffee">
+      <p>${coffee.name}</p>
+      <p>${coffee.roast}</p>
+    </div>
+  `;
+    }
 
-    return html;
- }
 
 
 // Displaying All Coffee
