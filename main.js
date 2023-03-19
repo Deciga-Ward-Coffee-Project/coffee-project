@@ -14,13 +14,12 @@
 
 
 // Displaying All Coffee
-function renderCoffees(coffees) {
-   let html = '';
-    for(let i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
+    function renderCoffees(coffees) {
+        return coffees
+            .map((coffee) => renderCoffee(coffee))
+            .join('');
     }
-    return html;
-}
+
 
 
 
