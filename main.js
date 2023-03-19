@@ -10,11 +10,10 @@ function renderCoffee(coffee) {
     html += '</div>';
 
     return html;
-}
+ }
 
 
 // Displaying All Coffee
-
 function renderCoffees(coffees) {
    let html = '';
     for(let i = coffees.length - 1; i >= 0; i--) {
@@ -22,9 +21,9 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-// function filterCoffeebyRoast () {
-//
-// });
+
+
+
 
 // Updating new coffee into array
 function updateCoffees(e) {
