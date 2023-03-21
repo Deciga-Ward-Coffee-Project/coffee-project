@@ -19,12 +19,12 @@ function renderCoffees(coffees) {
         return a.id -b.id;
     });
 
-// Generating html of each coffee object using the renderCoffee function after being sorted //
-    return coffees.map(function(coffee) {
-        return renderCoffee(coffee);
-
-    }).join('')
-
+// Generate HTML of each coffee object using the renderCoffee function
+    var html = '';
+    for (var i = 0; i < coffees.length; i++) {
+        html += renderCoffee(coffees[i]);
+    }
+    return html;
 }
 
 // Grabbing data from "Coffee Search Bar ID" //
@@ -106,6 +106,10 @@ var coffees = [
     {id: 13, name: 'Bean Girls', roast: 'dark'},
     {id: 14, name: 'Roast Busters', roast: 'dark'},
 ];
+
+var coffeeContainer = document.querySelector('#coffee-container');
+coffeeContainer.innerHTML = renderCoffees(coffees);
+
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
