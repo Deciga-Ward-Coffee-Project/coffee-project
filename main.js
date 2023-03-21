@@ -37,7 +37,7 @@ function updateCoffees() {
     let selectedRoast = roastSelection.value;
 
     // typedInput is userInput's data turned into all CAPS //
-    let typedInput = userInput.value.toUpperCase();
+    let typedInput = userInput.value.toLowerCase();
 
     // filtered coffees declares an empty array for search results to be put in //
     let filteredCoffees = [];
@@ -47,7 +47,7 @@ function updateCoffees() {
 
         // if statement is checking for roast type and coffee to matched with the userInput's results //
         if(coffee.roast === selectedRoast || selectedRoast === "all") {
-            if(coffee.name.toUpperCase().includes(typedInput)) {
+            if(coffee.name.toUpperCase().includes(typedInput) && coffee.name.toLowerCase().includes(typedInput)) {
 
                 // Once results are matched, the results are pushed/added to filteredCoffees's array //
                 filteredCoffees.push(coffee);
